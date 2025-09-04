@@ -2,11 +2,10 @@
 from dtbs import lista_de_palavras as lista
 import random
 
-#Requisitos:
-#1 - Forca funcional
-#2 - Contagem de tentativas
-#3 - Geração de palavras
-#4 - Dicas
+#Últimas mudanças:
+#1 - Correção do bug indíce da palavra maior que o total
+#2 - Formatação: letra da tentativa sempre em minúsculo
+#3 - Formação: primeira letra sempre em maiúsculo
 
 class Palavra:
     palavra = []
@@ -20,7 +19,8 @@ class Palavra:
 
 #Define a palavra
 def definirPalavra(ls):
-    i = random.randint(0, 3)
+    i = random.randint(0, 2)
+    print(i)
     p_data = ls[i].split("_")
     p = Palavra()
     p.palavra = p_data[0]
@@ -46,7 +46,7 @@ def Menu():
 
 #Recebe a letra da tentativa e verifica se ela é repetida ou não
 def TentaLetra(vet_letras):
-    letra = input("\nDigite a letra: ")
+    letra = input("\nDigite a letra: ").lower()
     repetida = False
 
     for l in range(len(vet_letras)):
@@ -66,7 +66,10 @@ def TentaLetra(vet_letras):
 def VerificarLetra(letra, p_tentativa, palavra):
     for l in range(len(palavra)):
         if letra == palavra[l]:
-            p_tentativa[l] = palavra[l]
+            if l == 0:
+                p_tentativa[l] = palavra[l].upper()
+            else:
+                p_tentativa[l] = palavra[l]
 
     print("".join(p_tentativa))
 
