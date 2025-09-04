@@ -1,0 +1,1 @@
+lista_de_palavras = ["batalha_guerra_incomum", "bolo_confeito_comum", "pedra_terra_comum"]
