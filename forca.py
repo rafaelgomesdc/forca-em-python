@@ -3,9 +3,7 @@ from dtbs import lista_de_palavras as lista
 import random
 
 #Últimas mudanças:
-#1 - Correção do bug indíce da palavra maior que o total
-#2 - Formatação: letra da tentativa sempre em minúsculo
-#3 - Formação: primeira letra sempre em maiúsculo
+#1 - Aumento da lista de palavras usando o chatgpt para gerá-las
 
 class Palavra:
     palavra = []
@@ -19,7 +17,7 @@ class Palavra:
 
 #Define a palavra
 def definirPalavra(ls):
-    i = random.randint(0, 2)
+    i = random.randint(0, len(ls))
     print(i)
     p_data = ls[i].split("_")
     p = Palavra()
@@ -93,7 +91,7 @@ def Main():
             case 3:
                 if input("Digite a tentativa: ") == p.palavra:
                     print("Você Acertou!!\n")
-                    if input("1 = Jogar novamente\n2 = Encerrar\nOpção desejada: ") == 1:
+                    if int(input("1 = Jogar novamente\n2 = Encerrar\nOpção desejada: ")) == 1:
                         Main()
                     else:
                         break
