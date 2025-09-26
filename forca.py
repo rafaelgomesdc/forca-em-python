@@ -57,50 +57,56 @@ def TentaLetra(vet_letras):
 
 #
 def VerificarLetra(letra, p_tentativa, palavra):
-    def VerificarAcento():
-        for l in range(len(palavra)):
-            if letra == "a":
-                match palavra[l]:
-                    case "á":
-                        p_tentativa[l] = palavra[l]
-                    case "à":
-                        p_tentativa[l] = palavra[l]
-                    case "ã":
-                        p_tentativa[l] = palavra [l]
-                    case "â":
-                        p_tentativa[l] = palavra [l]
-            elif letra == "e":
-                match palavra[l]:
-                    case "é":
-                        p_tentativa[l] = palavra[l]
-                    case "è":
-                        p_tentativa[l] = palavra[l]
-                    case "ê":
-                        p_tentativa[l] = palavra[l]
-            elif letra == "i":
-                match palavra[l]:
-                    case "í":
-                        p_tentativa[l] = palavra[l]
-                    case "ì":
-                        p_tentativa[l] = palavra[l]
-                    case "î":
-                        p_tentativa[l] = palavra[l]
-            elif letra == "o":
-                match palavra[l]:
-                    case "ó":
-                        p_tentativa[l] = palavra[l]
-                    case "ò":
-                        p_tentativa[l] = palavra[l]
-                    case "õ":
-                        p_tentativa[l] = palavra[l]
-                    case "ô":
-                        p_tentativa[l] = palavra[l]
-            elif letra == "u":
-                match palavra[l]:
-                    case "ú":
-                        p_tentativa[l] = palavra[l]
-                    case "ù":
-                        p_tentativa[l] = palavra[l]
+    for l in range(len(palavra)):
+        if letra == "a":
+            match palavra[l]:
+                case "á":
+                    p_tentativa[l] = palavra[l]
+                case "à":
+                    p_tentativa[l] = palavra[l]
+                case "ã":
+                    p_tentativa[l] = palavra [l]
+                case "â":
+                    p_tentativa[l] = palavra [l]
+        elif letra == "e":
+            match palavra[l]:
+                case "é":
+                    p_tentativa[l] = palavra[l]
+                case "è":
+                    p_tentativa[l] = palavra[l]
+                case "ê":
+                    p_tentativa[l] = palavra[l]
+        elif letra == "i":
+            match palavra[l]:
+                case "í":
+                    p_tentativa[l] = palavra[l]
+                case "ì":
+                    p_tentativa[l] = palavra[l]
+                case "î":
+                    p_tentativa[l] = palavra[l]
+        elif letra == "o":
+            match palavra[l]:
+                case "ó":
+                    p_tentativa[l] = palavra[l]
+                case "ò":
+                    p_tentativa[l] = palavra[l]
+                case "õ":
+                    p_tentativa[l] = palavra[l]
+                case "ô":
+                    p_tentativa[l] = palavra[l]
+        elif letra == "u":
+            match palavra[l]:
+                case "ú":
+                    p_tentativa[l] = palavra[l]
+                case "ù":
+                    p_tentativa[l] = palavra[l]
+        elif letra == palavra[l]:
+            if l == 0:
+                p_tentativa = palavra[l].upper()
+            else:
+                p_tentativa = palavra[l]
+
+        #passar for de baixo pra cá
 
     for l in range(len(palavra)):
         if letra == palavra[l]:
